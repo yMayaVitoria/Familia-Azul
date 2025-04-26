@@ -1,0 +1,197 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*-- ===================================== */
+/*--            INDEX.HTML                 */
+/*-- ===================================== */
+
+/* Botão Doe Agora personalizado */
+.doe-agora-btn {
+  background: linear-gradient(90deg, #ef4444 0%, #f472b6 50%, #facc15 100%);
+  padding: 0.75rem 2.5rem;
+  box-shadow: 0 4px 20px 0 rgba(239,68,68,0.15), 0 1.5px 4px 0 rgba(0,0,0,0.08);
+  border: 2px solid #ef4444;
+  transition: 
+    transform 0.2s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.2s cubic-bezier(.4,0,.2,1),
+    background 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.doe-agora-btn:hover, .doe-agora-btn:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: linear-gradient(90deg, #dc2626 0%, #db2777 50%, #eab308 100%);
+}
+
+.social-icon {
+  transition: color 0.2s, transform 0.2s;
+}
+.social-icon:hover, .social-icon:focus {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+/* Animação nos ícones das áreas de atuação */
+.area-icone {
+  transition: transform 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.area-icone:hover,
+.area-icone:focus {
+  transform: scale(1.18) rotate(-6deg);
+  color: #f59e42; /* laranja suave para destaque */
+}
+
+header {
+  /* Sombra suave inferior para profundidade */
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+/* Contraste alto */
+.contraste-alto, .contraste-alto body {
+  background: #000 !important;
+  color: #fff !important;
+}
+.contraste-alto header,
+.contraste-alto footer,
+.contraste-alto section,
+.contraste-alto .bg-blue-100,
+.contraste-alto .bg-blue-200,
+.contraste-alto .bg-white {
+  background: #111 !important;
+  color: #fff !important;
+}
+.contraste-alto a, .contraste-alto a:visited {
+  color: #ffd600 !important;
+  text-decoration: underline;
+}
+
+/* Fonte grande */
+.fonte-grande, .fonte-grande body {
+  font-size: 1.25em !important;
+}
+
+#acessibilidade-opcoes {
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+/* Garante que imagens não ultrapassem o container */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animação e estilo do menu mobile */
+#menu-mobile {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+}
+#menu-mobile:not(.hidden) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hover animado nos cards de dicas */
+.dicas-card {
+  transition: box-shadow 0.3s, background 0.3s, opacity 0.7s, transform 0.7s;
+  will-change: box-shadow, background, opacity, transform;
+}
+.dicas-card:hover, .dicas-card:focus {
+  background: #e0e7ff;
+  box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.18), 0 3px 8px 0 rgba(0,0,0,0.10);
+}
+
+/* Fade-in animado ao rolar */
+.dicas-card.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Animação de sublinhado nos itens da navbar */
+.nav-underline {
+  position: relative;
+  overflow: hidden;
+}
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb 0%, #facc15 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+.nav-underline:hover::after,
+.nav-underline:focus::after {
+  transform: scaleX(1);
+}
+
+#area-explicacao {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 8px 32px 0 rgba(59, 130, 246, 0.18), 0 3px 8px 0 rgba(0,0,0,0.10);
+  border-radius: 1.25rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fde68a;
+  background: linear-gradient(135deg, #fef9c3 0%, #e0e7ff 60%, #dbeafe 100%);
+}
+#area-explicacao:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0) scale(1.01);
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(40px) scale(0.97);}
+  to { opacity: 1; transform: translateY(0) scale(1.01);}
+}
+.animate-fade-in {
+  animation: fade-in 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+/* FAQ animação */
+.faq-answer {
+  transition: max-height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+.faq-answer.open {
+  max-height: 300px;
+  opacity: 1;
+}
+.faq-question .fa-chevron-down {
+  transition: transform 0.3s;
+}
+.faq-question.active .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 640px) {
+  #acessibilidade-btn {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* 2x2 grid só para Android mobile */
+@media (max-width: 767px) {
+  html.android #areas-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  #area-explicacao {
+    padding: 1.25rem !important;   /* p-5 */
+    max-width: 95vw !important;
+    font-size: 1rem;
+  }
+}
