@@ -7,52 +7,163 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sobre.css" />
+  <script src="js/sobre.js"></script>
 </head>
 <body class="bg-white">
-  <header class="bg-yellow-400 p-4 flex justify-between items-center">
-    <div class="flex items-center">
-      <img 
-        src="https://placehold.co/50x50" 
-        alt="Logo da Associação Família Azul de Conceição do Coité" 
-        class="h-12 w-12 rounded-full"
-      />
-      <h1 class="ml-4 text-lg font-bold">
+  <header class="bg-gradient-to-r from-yellow-300 via-yellow-400 to-blue-200 p-4 flex justify-between items-center shadow-lg sticky top-0 z-40">
+    <div class="flex items-center gap-4">
+      <a href="../index.html">
+        <img 
+          src="../src/images/Logo family.png" 
+          alt="Logo da Associação Família Azul de Conceição do Coité" 
+          class="h-16 w-16 md:h-20 md:w-20 rounded-full object-cover"
+          loading="lazy"
+          style="cursor:pointer"
+        />
+      </a>
+      <h1 class="text-lg md:text-2xl font-bold leading-tight text-center md:text-left text-blue-900 drop-shadow">
         Associação Família Azul de Conceição do Coité
       </h1>
     </div>
-    <nav class="hidden md:flex space-x-4" aria-label="Menu principal">
-      <a class="text-black" href="index.html">Início</a>
-      <a class="text-black" href="sobre.html">Sobre</a>
-      <a class="text-black" href="#">Como ajudar</a>
+    <nav class="hidden md:flex space-x-4" aria-label="Menu principal" id="menu-desktop">
+      <a class="flex items-center gap-2 text-black hover:text-blue-900 font-semibold transition-colors nav-underline" href="../index.html">
+        <i class="fas fa-home"></i>
+        Início
+      </a>
+      <a class="flex items-center gap-2 text-black hover:text-blue-900 font-semibold transition-colors nav-underline" href="sobre.html">
+        <i class="fas fa-info-circle"></i>
+        Sobre
+      </a>
+      <a class="flex items-center gap-2 text-black hover:text-blue-900 font-semibold transition-colors nav-underline" href="#">
+        <i class="fas fa-hands-helping"></i>
+        Como ajudar
+      </a>
     </nav>
-    <button class="md:hidden text-black" aria-label="Abrir menu">
-      <i class="fas fa-bars"></i>
-    </button>
+    <div class="md:hidden relative">
+      <button id="menu-mobile-btn" class="text-black flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md hover:bg-yellow-200 transition-all duration-200" aria-label="Abrir menu">
+        <span class="sr-only">Abrir menu</span>
+        <i class="fas fa-bars text-2xl transition-transform duration-300" id="menu-icon"></i>
+      </button>
+      <div id="menu-mobile" class="hidden absolute right-0 mt-2 bg-white rounded-xl shadow-2xl flex flex-col w-48 z-50 opacity-0 scale-95 transition-all duration-300 origin-top-right">
+        <a class="flex items-center gap-2 p-4 text-black border-b hover:bg-blue-100 transition nav-underline" href="../index.html">
+          <i class="fas fa-home"></i>
+          Início
+        </a>
+        <a class="flex items-center gap-2 p-4 text-black border-b hover:bg-blue-100 transition nav-underline" href="sobre.html">
+          <i class="fas fa-info-circle"></i>
+          Sobre
+        </a>
+        <a class="flex items-center gap-2 p-4 text-black hover:bg-blue-100 transition nav-underline" href="#">
+          <i class="fas fa-hands-helping"></i>
+          Como ajudar
+        </a>
+      </div>
+    </div>
   </header>
 
   <main class="text-center">
     <section class="bg-blue-100 p-8">
       <h2 class="text-4xl font-bold text-blue-900">Família Azul</h2>
       <p class="text-lg text-blue-900">Juntos pelo respeito, inclusão e amor</p>
-      <a href="#" class="inline-block mt-4 bg-red-500 text-white py-2 px-4 rounded" role="button">
+      <a href="https://www.vakinha.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=Vakinha_google_conversao_search_fundo_11_always-on_institucional_home-cpc&utm_content=120558729261&utm_term=vakinha&gad_source=1&gbraid=0AAAAADoIfp0_oovYKzE6QUF543_4zmlcT&gclid=Cj0KCQjwiLLABhCEARIsAJYS6umQPu-6pXmUbWiH-zYOhc4q47l7FgJxoffrboUG557mdtgmgbFSke4aAqnqEALw_wcB" 
+         class="doe-agora-btn inline-block mt-4 text-white rounded-full text-lg font-bold uppercase tracking-wide focus:outline-none focus:ring-4 focus:ring-red-300"
+         role="button">
         Doe Agora
       </a>
     </section>
 
-    <section class="bg-white p-8 max-w-3xl mx-auto text-left">
-      <h3 class="text-2xl font-bold text-blue-900 mb-4">Sobre a Associação</h3>
-      <p class="mb-4">
-        A Associação Família Azul de Conceição do Coité é uma organização sem fins lucrativos dedicada à inclusão, respeito e apoio às pessoas com autismo e suas famílias. Atuamos promovendo campanhas de conscientização, educação, saúde e suporte familiar.
-      </p>
-      <p class="mb-8">
-        Nosso objetivo é construir uma sociedade mais justa, acolhedora e informada, onde todos tenham seus direitos respeitados e possam viver com dignidade.
-      </p>
-      <h4 class="text-xl font-semibold text-blue-800 mb-2 mt-6">1. Quem Somos</h4>
-      <p>
-        A Associação Família Azul foi fundada em novembro de 2016. A primeira idealizadora foi a mãe de uma criança com autismo que se sentia desassistida em todos os aspectos para tratar o seu filho no município. Lucivalda Silva, moradora da Fazenda Tanque, localizada no distrito de Juazeirinho, procurou outras famílias de pessoas portadoras do TEA e começaram a se reunir e discutir a ideia. Logo, foi à luta com outras oito famílias e em novembro registrou o estatuto.
-      </p>
+    <section class="relative bg-gradient-to-br from-blue-100 via-blue-50 to-yellow-50 p-8 max-w-3xl mx-auto rounded-2xl shadow-xl my-12 overflow-hidden">
+      <div class="absolute left-0 top-0 w-32 h-32 bg-blue-200 rounded-full opacity-30 blur-2xl -z-10"></div>
+      <div class="absolute right-0 bottom-0 w-40 h-40 bg-yellow-100 rounded-full opacity-40 blur-2xl -z-10"></div>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-shrink-0 flex flex-col items-center mb-6 md:mb-0">
+          <div class="bg-white rounded-full p-1 shadow-lg mb-3 border-4 border-blue-200">
+            <img 
+              src="../src/images/Logo family.png" 
+              alt="Logo Associação Família Azul de Conceição do Coité" 
+              class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <span class="text-blue-800 font-bold text-xl tracking-wide uppercase">Sobre a Associação</span>
+        </div>
+        <div class="text-left">
+          <p class="text-blue-900 text-lg leading-relaxed mb-3">
+            A <span class="font-bold text-blue-800">Associação Família Azul de Conceição do Coité</span> é uma organização sem fins lucrativos dedicada à inclusão, respeito e apoio às pessoas com autismo e suas famílias.
+          </p>
+          <p class="text-blue-900 text-lg leading-relaxed mb-3">
+            Atuamos promovendo campanhas de <span class="font-semibold text-blue-700">conscientização</span>, <span class="font-semibold text-blue-700">educação</span>, <span class="font-semibold text-blue-700">saúde</span> e <span class="font-semibold text-blue-700">suporte familiar</span>. Nosso objetivo é construir uma sociedade mais justa, acolhedora e informada, onde todos tenham seus direitos respeitados e possam viver com dignidade.
+          </p>
+        </div>
+      </div>
     </section>
+
+    <section class="relative bg-gradient-to-br from-blue-100 via-blue-50 to-yellow-50 p-8 max-w-3xl mx-auto rounded-2xl shadow-xl my-12 overflow-hidden">
+      <div class="absolute left-0 top-0 w-32 h-32 bg-blue-200 rounded-full opacity-30 blur-2xl -z-10"></div>
+      <div class="absolute right-0 bottom-0 w-40 h-40 bg-yellow-100 rounded-full opacity-40 blur-2xl -z-10"></div>
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-shrink-0 flex flex-col items-center">
+          <div class="bg-blue-200 rounded-full p-4 shadow-lg mb-2">
+            <i class="fas fa-users text-4xl text-blue-700"></i>
+          </div>
+          <span class="text-blue-800 font-bold text-lg tracking-wide uppercase">Quem Somos</span>
+        </div>
+        <div class="text-left">
+          <p class="text-blue-900 text-lg leading-relaxed">
+            A Associação Família Azul foi fundada em <span class="font-bold text-blue-800">novembro de 2016</span>. A primeira idealizadora foi a mãe de uma criança com autismo que se sentia desassistida em todos os aspectos para tratar o seu filho no município.<br><br>
+            <span class="font-semibold text-blue-700">Lucivalda Silva</span>, moradora da Fazenda Tanque, localizada no distrito de Juazeirinho, procurou outras famílias de pessoas portadoras do TEA e começaram a se reunir e discutir a ideia. Logo, foi à luta com outras oito famílias e em novembro registrou o estatuto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative bg-gradient-to-br from-blue-100 via-blue-50 to-yellow-50 p-8 max-w-3xl mx-auto rounded-2xl shadow-xl my-12 overflow-hidden">
+      <div class="absolute left-0 top-0 w-32 h-32 bg-blue-200 rounded-full opacity-30 blur-2xl -z-10"></div>
+      <div class="absolute right-0 bottom-0 w-40 h-40 bg-yellow-100 rounded-full opacity-40 blur-2xl -z-10"></div>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-shrink-0 flex flex-col items-center mb-6 md:mb-0">
+          <div class="bg-white rounded-full p-3 shadow-lg mb-3 border-4 border-blue-200">
+            <i class="fas fa-map-marker-alt text-4xl text-blue-700"></i>
+          </div>
+          <span class="text-blue-800 font-bold text-xl tracking-wide uppercase">Estrutura e Localização</span>
+        </div>
+        <div class="text-left">
+          <p class="text-blue-900 text-lg leading-relaxed mb-3">
+            <b>Endereço:</b> Rua Carlos Gomes, 99,  Centro – próximo à Praça da Bíblia, Conceição do Coité, BA, Brasil.
+          </p>
+          <p class="text-blue-900 text-lg leading-relaxed mb-3">
+            <b>Infraestrutura:</b> Nossa sede é um espaço acolhedor e funcional, contando com:
+          </p>
+          <ul class="list-disc pl-6 text-blue-900 text-lg space-y-1">
+            <li>Salas de atendimento</li>
+            <li>Banheiro</li>
+            <li>Sala de recepção</li>
+            <li>Minibiblioteca</li>
+            <li>Cozinha</li>
+            <li>Área para reuniões e eventos internos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-blue-200 p-8 shadow-md rounded-xl my-8" aria-label="Missão, Visão e Valores">
+      <div id="mvv-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex flex-col items-center">
+          <i class="fas fa-bullseye text-5xl text-blue-900 mb-2 mvv-icone-btn" data-mvv="missao" style="cursor:pointer"></i>
+          <p class="mt-2 text-lg font-bold">Missão</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fas fa-eye text-5xl text-blue-900 mb-2 mvv-icone-btn" data-mvv="visao" style="cursor:pointer"></i>
+          <p class="mt-2 text-lg font-bold">Visão</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fas fa-heart text-5xl text-blue-900 mb-2 mvv-icone-btn" data-mvv="valores" style="cursor:pointer"></i>
+          <p class="mt-2 text-lg font-bold">Valores</p>
+        </div>
+      </div>
+    </section>
+    <div id="mvv-explicacao" class="max-w-2xl mx-auto my-8 p-6 bg-gradient-to-br from-yellow-100 via-blue-50 to-blue-100 border-2 border-yellow-300 shadow-2xl rounded-2xl text-blue-900 text-left text-base hidden animate-fade-in"></div>
   </main>
 
   <footer class="bg-white p-8 text-center border-t border-gray-200 mt-8">
@@ -64,11 +175,11 @@
         </div>
         <div class="flex items-center mb-2">
           <i class="fas fa-envelope mr-2 text-blue-900" aria-hidden="true"></i>
-          <a href="mailto:contato@familiaazul.org" class="hover:underline">contato@familiaazul.org</a>
+          <a href="mailto:contato@familiaazul.org" class="hover:underline">associaçãofamiliazulcoite@gmail.com</a>
         </div>
         <div class="flex items-center">
           <i class="fas fa-map-marker-alt mr-2 text-blue-900" aria-hidden="true"></i>
-          <span>Rua Exemplo, 123, Conceição do Coité</span>
+          <span>Rua Carlos Gomes, 99,  Centro – próximo à Praça da Bíblia, Conceição do Coité, BA, Brasil.</span>
         </div>
       </address>
       <div class="flex flex-col items-center">
@@ -91,5 +202,31 @@
       Associação sem fins lucrativos. Juntos pela inclusão.
     </p>
   </footer>
+  
+  <div id="acessibilidade-btn" class="fixed bottom-6 right-6 z-50 flex flex-col-reverse items-end space-y-reverse space-y-2">
+    <button id="btn-darkmode" class="bg-gray-800 text-white rounded-full p-3 shadow-lg hover:bg-gray-900 transition-all duration-300 focus:outline-none mb-2 flex items-center justify-center" title="Ativar/Desativar modo escuro" aria-label="Modo escuro" style="width:44px;height:44px;">
+      <span id="icon-darkmode" class="transition-transform duration-500">
+        <i class="fas fa-moon text-xl"></i>
+      </span>
+    </button>
+    <button id="btn-acessibilidade-toggle" class="bg-blue-700 text-white rounded-full p-3 shadow-lg hover:bg-blue-900 transition-all duration-300 focus:outline-none flex items-center justify-center" title="Acessibilidade" aria-label="Abrir opções de acessibilidade" style="width:44px;height:44px;">
+      <i class="fas fa-universal-access text-xl"></i>
+    </button>
+    <div id="acessibilidade-opcoes" class="flex flex-col items-end space-y-2 mb-2 bg-white rounded-xl shadow-xl p-4 border border-blue-100 hidden">
+      <button id="btn-contraste" class="bg-blue-700 text-white rounded-full p-2.5 shadow-lg hover:bg-blue-900 transition" title="Ajuste de contraste">
+        <i class="fas fa-adjust"></i>
+      </button>
+      <button id="btn-fonte" class="bg-blue-700 text-white rounded-full p-2.5 shadow-lg hover:bg-blue-900 transition" title="Aumentar fonte">
+        <i class="fas fa-search-plus"></i>
+      </button>
+      <button id="btn-leitura" class="bg-blue-700 text-white rounded-full p-2.5 shadow-lg hover:bg-blue-900 transition" title="Leitura de texto">
+        <i class="fas fa-volume-up"></i>
+      </button>
+      <a href="https://www.vlibras.gov.br/" target="_blank" rel="noopener" class="bg-blue-700 text-white rounded-full p-2.5 shadow-lg hover:bg-blue-900 transition flex items-center justify-center" title="Página acessível em Libras">
+        <i class="fas fa-sign-language"></i>
+      </a>
+    </div>
+  </div>
+  <script src="js/sobre.js"></script>
 </body>
 </html>

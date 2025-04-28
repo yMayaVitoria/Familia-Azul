@@ -9,15 +9,15 @@ Este site é um projeto **independente** realizado por um grupo de alunos do cur
 ## Estrutura do Projeto
 
 ```
-site-ong
+Familia-Azul-main
+├── index.html                  # Página principal do site (na raiz do repositório)
 ├── src
 │   ├── css
-│   │   └── style.css          # Estilos CSS personalizados
-│   ├── images                 # Imagens utilizadas no site
-│   ├── js
-│   │   └── main.js            # Funcionalidades interativas em JavaScript
-│   └── index.html             # Página principal do site
-├── README.md                  # Documentação do projeto
+│   │   └── style.css           # Estilos CSS personalizados
+│   ├── images                  # Imagens utilizadas no site
+│   └── js
+│       └── main.js             # Funcionalidades interativas em JavaScript
+├── README.md                   # Documentação do projeto
 ```
 
 ## Como Executar
